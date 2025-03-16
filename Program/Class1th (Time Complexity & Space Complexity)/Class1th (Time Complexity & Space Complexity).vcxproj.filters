@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Class1th (Time Complexity &amp; Space Complexity).cpp">
+    <ClCompile Include="Source.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
