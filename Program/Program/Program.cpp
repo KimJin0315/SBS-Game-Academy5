@@ -1,29 +1,38 @@
 ﻿#include <iostream>
 
+#define SIZE 5
+
 using namespace std;
 
 int main()
 {
-#pragma region 완전 탐색
-    // 가능한 모든 경우의 수를 탐색하면서
-    // 결과를 찾아내는 알고리즘입니다.
+#pragma region 삽입 정렬
+    // 데이터를 하나씩 확인하면서 이미 정렬된 부분과 비교하여
+    // 자신의 위치를 찾아 삽입하는 방식으로 정렬하는 알고리즘입니다/
 
-    int password[] = { 7,1,2 };
+    int list[SIZE] = { 9,6,8,1,3 };
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < SIZE - 1; i++)
     {
-        for (int j = 0; j < 10; j++)
-        {
-            for (int k = 0; k < 10; k++)
-            {
-                if (password[0] == i && password[1] == j && password[2] == k)
-                {
-                    cout << "Password Release " << i << " " << j << " " << k << endl;
+        int key = list[i + 1];
 
-                    break;
-                }
+        for (int j = 0; j < SIZE - 1; j++)
+        {
+            if (key < list[j])
+            {
+                list[j + 1] = list[j];
+                list[j] = key;
+            }
+            else if (key > list[j])
+            {
+                
             }
         }
+    }
+
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << list[i] << " ";
     }
 
 #pragma endregion
