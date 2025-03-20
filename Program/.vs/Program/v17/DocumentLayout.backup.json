@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{21E7E138-3383-41D3-A935-FDB5038399F9}|Program\\Program.vcxproj|solutionrelative:Program\\Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{294BB560-2084-4C04-AB12-347DCCD12FA1}|Class8th (Count Sort)\\Class8th (Count Sort).vcxproj|C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class8th (Count Sort)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{294BB560-2084-4C04-AB12-347DCCD12FA1}|Class8th (Count Sort)\\Class8th (Count Sort).vcxproj|solutionrelative:Class8th (Count Sort)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1428AE-85B4-46E4-A142-9A73C28119F8}|Class7th (Sieve of Eratosthenes)\\Class7th (Sieve of Eratosthenes).vcxproj|C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class7th (Sieve of Eratosthenes)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6F1428AE-85B4-46E4-A142-9A73C28119F8}|Class7th (Sieve of Eratosthenes)\\Class7th (Sieve of Eratosthenes).vcxproj|solutionrelative:Class7th (Sieve of Eratosthenes)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A75764C-D3F0-4376-A799-0325847624EE}|Class6th (Euclidean)\\Class6th (Euclidean).vcxproj|C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class6th (Euclidean)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A75764C-D3F0-4376-A799-0325847624EE}|Class6th (Euclidean)\\Class6th (Euclidean).vcxproj|solutionrelative:Class6th (Euclidean)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC527B9-2550-48F4-9DC5-887BECADDEEB}|Class5th (Insert Sort)\\Class5th (Insert Sort).vcxproj|C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class5th (Insert Sort)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6EC527B9-2550-48F4-9DC5-887BECADDEEB}|Class5th (Insert Sort)\\Class5th (Insert Sort).vcxproj|solutionrelative:Class5th (Insert Sort)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{47D4E05E-0A00-4F8C-A4EF-8F4127EE30D6}|Class4th (Select Sort)\\Class4th (Select Sort).vcxproj|C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class4th (Select Sort)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{47D4E05E-0A00-4F8C-A4EF-8F4127EE30D6}|Class4th (Select Sort)\\Class4th (Select Sort).vcxproj|solutionrelative:Class4th (Select Sort)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -40,7 +56,7 @@
               "RelativeDocumentMoniker": "Program\\Program.cpp",
               "ToolTip": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Program\\Program.cpp",
               "RelativeToolTip": "Program\\Program.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-16T14:54:09.47Z",
               "IsPinned": true,
@@ -48,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Source.cpp",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class1th (Time Complexity \u0026 Space Complexity)\\Source.cpp",
               "RelativeDocumentMoniker": "Class1th (Time Complexity \u0026 Space Complexity)\\Source.cpp",
@@ -62,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Source.cpp",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class2th (Brute Force)\\Source.cpp",
               "RelativeDocumentMoniker": "Class2th (Brute Force)\\Source.cpp",
@@ -76,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Source.cpp",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class3th (Bubble Sort)\\Source.cpp",
               "RelativeDocumentMoniker": "Class3th (Bubble Sort)\\Source.cpp",
@@ -90,15 +106,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Source.cpp",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class4th (Select Sort)\\Source.cpp",
               "RelativeDocumentMoniker": "Class4th (Select Sort)\\Source.cpp",
               "ToolTip": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class4th (Select Sort)\\Source.cpp",
               "RelativeToolTip": "Class4th (Select Sort)\\Source.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAiwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-16T15:30:59.001Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class5th (Insert Sort)\\Source.cpp",
+              "RelativeDocumentMoniker": "Class5th (Insert Sort)\\Source.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class5th (Insert Sort)\\Source.cpp",
+              "RelativeToolTip": "Class5th (Insert Sort)\\Source.cpp",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T15:31:09.644Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class6th (Euclidean)\\Source.cpp",
+              "RelativeDocumentMoniker": "Class6th (Euclidean)\\Source.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class6th (Euclidean)\\Source.cpp",
+              "RelativeToolTip": "Class6th (Euclidean)\\Source.cpp",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T15:47:00.158Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class7th (Sieve of Eratosthenes)\\Source.cpp",
+              "RelativeDocumentMoniker": "Class7th (Sieve of Eratosthenes)\\Source.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class7th (Sieve of Eratosthenes)\\Source.cpp",
+              "RelativeToolTip": "Class7th (Sieve of Eratosthenes)\\Source.cpp",
+              "ViewState": "AgIAACYAAAAAAAAAAAAiwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T15:49:29.288Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class8th (Count Sort)\\Source.cpp",
+              "RelativeDocumentMoniker": "Class8th (Count Sort)\\Source.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\SBS-Game-Academy5\\Program\\Class8th (Count Sort)\\Source.cpp",
+              "RelativeToolTip": "Class8th (Count Sort)\\Source.cpp",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T15:54:10.396Z",
               "IsPinned": true,
               "EditorCaption": ""
             }
