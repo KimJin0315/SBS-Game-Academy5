@@ -1,52 +1,76 @@
 ﻿#include <iostream>
 
+#define SIZE 6
+
 using namespace std;
 
-int Find(int list[], int left, int right)
+void quick_sort(int list[], int start, int end)
 {
-    if (left == right)
+    if (left > right)
     {
-        return list[left];
+        return ;
     }
     else
     {
-        int middle = (left + right) / 2;
+        // pivot 변수의 값을 설정합니다.
+        int pivot = start;
 
-        int leftMax = Find(list, left, middle);
-        int rightMax = Find(list, middle + 1, right);
+        // left 변수의 값을 설정합니다.
+        int left = quick_sort(list, start, end );
 
-        if (leftMax < rightMax)
+        // right 변수의 값을 설정합니다.
+        int right = quick_sort(list, start , end);
+
+        // left가 right보다 크거나 같을 때까지 반복합니다.
+        while (left <= right)
         {
-            return rightMax;
-        }
-        else
-        {
-            return leftMax;
+            // left가 end보다 작거나 같고 list[left]가
+            // list[pivot]보다 작거나 같을 때까지 반복합니다.
+            while (left <= end && list[pivot] >= list[left])
+            {
+                left++; // left의 값을 증가시킵니다.
+            }
+
+            // right가 start보다 크고 list[right]가
+            // list[pivot]보다 크거나 같을 때까지 반복합니다
+            while (right > start && list[pivot] <= list[right])
+            {
+                right--; // right의 값을 감소시킵니다.
+            }
+
+            if (left > right)
+            {
+                std::swap(list[pivot], list[right]);
+            }
+            else
+            {
+                std::swap(list[left], list[right]);
+            }
         }
     }
 }
 
 int main()
 {
-#pragma region 분할 정복
-    // 주어진 2개 이상의 부분으로 문제를 나눈 뒤 각 부분
-    // 문제에 대한 답을 재귀 호출을 이용하여 계산한 다음, 그
-    // 답으로 부터 전체 문제의 답을 계산해내는 알고리즘입니다.
+#pragma region 퀵 정렬
+    // 기준점을 획득한 다음 기준점을 기준으로 배열을 나누고 한 쪽에는
+    // 기준점보다 작은 값들이 위치하게 하고 다른 한 쪽에는 기준점보다
+    // 큰 값들이 위치하도록 정렬합니다.
 
-    // 분할 (Divide) : 주어진 문제를 두 개 혹은 그 이상의 형식으로 나눈다.
+    // 나누어진 하위 배열에 대해 재귀적으로 퀵 정렬을 호출하여
+    // 모든 배열이 기본 배열이 될 때까지 반복하면서 정렬하는 알고리즘입니다.
 
-    // 정복 (Conquer) : 나누어진 문제를 재귀적으로 해결해서 나누어진 문제를
-    // 더 이상 나누어서 문제가 필요없을 때까지 계속 분할합니다.
+    int list[SIZE] = { 5,4,6,2,1,3 };
 
-    // 통합 (Combine) : 나누어서 해결한 문제들을 통합해서 원래 문제의 해답을 생성합니다.
+    quick_sort(list, 0, SIZE - 1);
 
-    int list[] = { 20,15,99,1 };
-
-    int size = sizeof(list) / sizeof(int);
-
-    cout << Find(list, 0, size - 1);
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << list[i] << " ";
+    }
 
 #pragma endregion
+
 
     return 0;
 }
