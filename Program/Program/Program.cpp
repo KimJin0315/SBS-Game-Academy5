@@ -12,6 +12,8 @@ void merge_sort(int list[], int start, int end)
 
         merge_sort(list, start, middle);
         merge_sort(list, middle + 1, end);
+
+        combine(list, start, middle, end);
     }
 }
 
@@ -52,14 +54,9 @@ void combine(int list[], int start, int middle, int end)
         }
     }
 
-    for (int i = start; i <= end - 1 ; i++)
+    for (int i = start; i <= end ; i++)
     {
-        list[i];
-
-        for (int j = start; j <= end - 1; j++)
-        {
-            list[i] = container[j];
-        }
+        list[i] = container[i];  
     }
 
     delete[] container;
@@ -88,6 +85,10 @@ int main()
 
     merge_sort(list, 0, SIZE - 1);
 
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << list[i] << " ";
+    }
 
 
 #pragma endregion

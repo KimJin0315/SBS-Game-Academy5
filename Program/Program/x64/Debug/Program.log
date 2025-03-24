@@ -1,2 +1,2 @@
 ﻿  Program.cpp
-  Program.vcxproj -> C:\Users\admin\Desktop\SBS-Game-Academy5\Program\x64\Debug\Program.exe
+C:\Users\admin\Desktop\SBS-Game-Academy5\Program\Program\Program.cpp(15,9): error C3861: 'combine': 식별자를 찾을 수 없습니다.
