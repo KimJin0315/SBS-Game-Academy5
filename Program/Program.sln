@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class9th (Divide and Conque
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class10th (Binary Search)", "Class10th (Binary Search)\Class10th (Binary Search).vcxproj", "{C9121306-B0C6-4DB9-AAD4-1C8FF74E1C48}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class11th (Quick Sort)", "Class11th (Quick Sort)\Class11th (Quick Sort).vcxproj", "{94927404-6D4E-4726-9749-29182CB98448}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{C9121306-B0C6-4DB9-AAD4-1C8FF74E1C48}.Release|x64.Build.0 = Release|x64
 		{C9121306-B0C6-4DB9-AAD4-1C8FF74E1C48}.Release|x86.ActiveCfg = Release|Win32
 		{C9121306-B0C6-4DB9-AAD4-1C8FF74E1C48}.Release|x86.Build.0 = Release|Win32
+		{94927404-6D4E-4726-9749-29182CB98448}.Debug|x64.ActiveCfg = Debug|x64
+		{94927404-6D4E-4726-9749-29182CB98448}.Debug|x64.Build.0 = Debug|x64
+		{94927404-6D4E-4726-9749-29182CB98448}.Debug|x86.ActiveCfg = Debug|Win32
+		{94927404-6D4E-4726-9749-29182CB98448}.Debug|x86.Build.0 = Debug|Win32
+		{94927404-6D4E-4726-9749-29182CB98448}.Release|x64.ActiveCfg = Release|x64
+		{94927404-6D4E-4726-9749-29182CB98448}.Release|x64.Build.0 = Release|x64
+		{94927404-6D4E-4726-9749-29182CB98448}.Release|x86.ActiveCfg = Release|Win32
+		{94927404-6D4E-4726-9749-29182CB98448}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
