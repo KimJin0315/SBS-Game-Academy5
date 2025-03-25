@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class10th (Binary Search)",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class11th (Quick Sort)", "Class11th (Quick Sort)\Class11th (Quick Sort).vcxproj", "{94927404-6D4E-4726-9749-29182CB98448}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class12th (Merge Sort)", "Class12th (Merge Sort)\Class12th (Merge Sort).vcxproj", "{5131AF3B-D4D6-4F15-9990-14EA184B534E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{94927404-6D4E-4726-9749-29182CB98448}.Release|x64.Build.0 = Release|x64
 		{94927404-6D4E-4726-9749-29182CB98448}.Release|x86.ActiveCfg = Release|Win32
 		{94927404-6D4E-4726-9749-29182CB98448}.Release|x86.Build.0 = Release|Win32
+		{5131AF3B-D4D6-4F15-9990-14EA184B534E}.Debug|x64.ActiveCfg = Debug|x64
+		{5131AF3B-D4D6-4F15-9990-14EA184B534E}.Debug|x64.Build.0 = Debug|x64
+		{5131AF3B-D4D6-4F15-9990-14EA184B534E}.Debug|x86.ActiveCfg = Debug|Win32
+		{5131AF3B-D4D6-4F15-9990-14EA184B534E}.Debug|x86.Build.0 = Debug|Win32
+		{5131AF3B-D4D6-4F15-9990-14EA184B534E}.Release|x64.ActiveCfg = Release|x64
+		{5131AF3B-D4D6-4F15-9990-14EA184B534E}.Release|x64.Build.0 = Release|x64
+		{5131AF3B-D4D6-4F15-9990-14EA184B534E}.Release|x86.ActiveCfg = Release|Win32
+		{5131AF3B-D4D6-4F15-9990-14EA184B534E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
