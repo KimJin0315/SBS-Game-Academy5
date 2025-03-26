@@ -1,59 +1,76 @@
 ﻿#include <iostream>
 
-#define SIZE 100001
-
 using namespace std;
 
-int Fibonacci(int n, int& list)
+const int& Greedy(int n)
 {
-    while (list[n] != 0)
+    int count = 0;
+
+    while (n >= 10)
     {
-        list[n] = Fibonacci(n, list);
+        if (n >= 1000)
+        {
+            n -= 1000;
+            count++;
+        }
+        else if (n >= 500)
+        {
+            n -= 500;
+            count++;
+        }
+        else if (n >= 100)
+        {
+            n -= 100;
+            count++;
+        }
+        else if (n >= 50)
+        {
+            n -= 50;
+            count++;
+        }
+        else if (n >= 10)
+        {
+            n -= 10;
+            count++;
+        }
     }
-    if (Fibonacci(n - 2, list) == list[n - 2])
-    {
-        return list[n - 2];
-    }
-        
-    if (n <= 0)
-    {
-        return 0;
-    }
-    else if (n <= 2)
-    {
-        return 1;
-    }
-    return Fibonacci(n - 1, list) + Fibonacci(n - 2, list);
+
+    return count;
 }
 
 int main()
 {
-#pragma region 동적 계획법
-    // 특정 범위까지의 값을 구하기 위해 그것과
-    // 다른 범위까지의 값을 이용해서 효율적으로 값을
-    // 구하는 알고리즘입니다.
+#pragma region 탐욕법
+    // 최적의 해를 구하는 데에 사용되는 근사적인 방법으로 여러 경우 중 
+    // 하나를 검색해야 할 때마다 그 순간에 최적이라고 생각되는 것을 선택해 
+    // 나가는 방식으로 진행하여 최종적인 해답을 구하는 알고리즘입니다.
 
-    // (Overlapping Subproblems) 겹치는 부분 문제
-    // 동일한 작은 문제들이 반복하여 나타나는 경우를 의미합니다.
+    // 1. 탐욕 선택 속성
+    // 각 단계에서 '최적의 선택'을 했을 때 전체 문제에 대한
+    // 최적의 해를 구할 수 있는 경우입니다.
 
-    // (Optimal Substructure) 최적 부분 구조
-    // 부분 문제의 최적 결과 값을 사용하여 전체 문제의 최적
-    // 결과를 낼 수 있는 경우를 의미합니다.
+    // 2. 최적 부분 구조
+    // 전체 문제의 최적의 해가 '부분 문제의 최적의 해로 구성'될
+    // 수 있는 경우입니다.
 
-    // 메모이제이션 (Memoization)
-    // 프로그램이 동일한 계산을 반복해야 할 때, 이전에 계산한 값을 
-    // 메모리에 저장함으로써 동일한 계산을 반복 수행하는 작업을 
-    // 제거하여 프로그램의 실행 속도를 향상시키는 방법입니다.
+    // 탐욕 알고리즘으로 문제를 해결하는 방법
+
+    // 1. 선택 절차(Selection Procedure)
+    // 현재 상태에서의 최적의 해답을 선택합니다.
+
+    // 2. 적절성 검사 (Feasibility Check)
+    // 선택된 해가 문제의 조건을 만족하는지 검사합니다.
+
+    // 3. 해답 검사 (Solution Check)
+    // 원래의 문제가 해결되었는지 검사하고, 해결되지
+    // 않았다면 선택 절차로 돌아가 위의 과정을 반복합니다.
+
+    int money = 1370;
+
+    cout << Greedy(money);
 
 #pragma endregion
-    int list[SIZE] = {};
 
-    for (int i = 0; i < SIZE; i++)
-    {
-        list[i] = 0;
-    }
-
-    cout << Fibonacci(7, list[SIZE]) << endl;
 
     return 0;
 }
