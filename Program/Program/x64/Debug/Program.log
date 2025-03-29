@@ -1,3 +1,2 @@
 ﻿  Program.cpp
-C:\Users\Administrator\Desktop\SBS-Game-Academy5\Program\Program\Program.cpp(38,1): warning C4172: 지역 변수 또는 임시: count의 주소를 반환하고 있습니다.
-  Program.vcxproj -> C:\Users\Administrator\Desktop\SBS-Game-Academy5\Program\x64\Debug\Program.exe
+  Program.vcxproj -> C:\Users\user\Desktop\SBS-Game-Academy5\Program\x64\Debug\Program.exe
