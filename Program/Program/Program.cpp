@@ -6,78 +6,102 @@
 
 using namespace std;
 
-class Node
+class Graph
 {
 private:
+    int degree[SIZE];
     queue<int> queue;
-    bool visited[SIZE];
-    vector <int> adjacencyList[SIZE];
+    vector<int> adjacencyList[SIZE];
 public:
-    Node()
+
+    Graph()
     {
         for (int i = 0; i < SIZE; i++)
         {
-            visited[i] = false;
+            degree[i] = 0;
         }
     }
 
-    void insert(int i, int j)
+    void insert(int vertex, int edge)
     {
-        adjacencyList[i].push_back(j);
-        adjacencyList[j].push_back(i);
+        adjacencyList[vertex].push_back(edge);
+
+        degree[edge]++;
     }
 
-    void Search(int start)
+    void sort()
     {
-        queue.push(start);
-
-        visited[start] = true;
-
-        while (queue.empty() == false)
+        for (int i = 1; i <= SIZE; i++)
         {
-            int x = queue.front();
-
-            queue.pop();
-
-            cout << x << " ";
-
-            for (int i = 0; i < adjacencyList[x].size(); i++)
+            if (degree[i] == 0)
             {
-                int next = adjacencyList[x][i];
+                queue.push(i);
 
-                if (visited[next] == false)
+                while (queue.empty() == false)
                 {
-                    queue.push(next);
+                    int x = queue.front();
 
-                    visited[next] = true;
+                    queue.pop();
+
+                    cout << x << " ";
+
+                    for (int j = 0; j < adjacencyList[x].size(); j++)
+                    {
+                        int y = adjacencyList[x][j];
+                        degree[y]--;
+                        if (degree[y] == 0)
+                        {
+                            queue.push(y);
+                        }
+
+                    }
                 }
             }
-       }
+        }
+
+        
+        
     }
+
 
 };
 
 int main()
 {
-#pragma region 너비 우선 탐색(Breadth First Search)
-    // 시작 정점을 방문한 후 시작 정점에 인접한
-    // 모든 정점들을 우선 방문하는 방법입니다.
+#pragma region 위상 정렬
+    // 병합 그래프에 존재하는 각 정점들의 선행 순서를 지키며,
+    // 모든 정점을 차례대로 진행하는 알고리즘입니다.
 
-    Node node;
+    // 사이클이 발생하는 경우 위상 정렬을 수행할 수 없습니다.
 
-    node.insert(1, 2);
-    node.insert(1, 3);
+    // DAG(Directed Acyclic Graph) : 사이클이 존재하지 않는 그래프
 
-    node.insert(2, 4);
-    node.insert(2, 5);
+    // 시간 복잡도 : O(V + E)
 
-    node.insert(3, 6);
-    node.insert(3, 7);
+    // 위상 정렬하는 방법
 
-    node.Search(1);
+    // 1. 진입 차수가 0인 정점을 Queue에 삽입합니다.
 
-    // 더 이상 방문하지 않은 정점이 없을 때까지
-    // 방문하지 않은 모든 정점들에 대해서도 너비 우선 탐색을 적용합니다.
+    // 2. Queue에서 원소를 꺼내 열결된 모든 간선을 제거합니다.
+
+    // 3. 간선 제거 이후에 진입 차수가 0이 된 정점을 Queue에 삽입합니다.
+
+    // 4. Queue가 비어있을 때까지 2번 ~ 3번 작업을 반복 수행합니다.
+
+    Graph graph;
+
+    graph.insert(1, 2);
+    graph.insert(1, 5);
+
+    graph.insert(2, 3);
+    graph.insert(3, 4);
+
+    graph.insert(4, 6);
+    graph.insert(5, 6);
+
+    graph.insert(6, 7);
+
+    graph.sort();
 
 #pragma endregion
 
