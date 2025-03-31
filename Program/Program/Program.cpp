@@ -31,36 +31,35 @@ public:
 
     void sort()
     {
-        for (int i = 1; i <= SIZE; i++)
+        for (int i = 1; i < SIZE; i++)
         {
             if (degree[i] == 0)
             {
                 queue.push(i);
-
-                while (queue.empty() == false)
-                {
-                    int x = queue.front();
-
-                    queue.pop();
-
-                    cout << x << " ";
-
-                    for (int j = 0; j < adjacencyList[x].size(); j++)
-                    {
-                        int y = adjacencyList[x][j];
-                        degree[y]--;
-                        if (degree[y] == 0)
-                        {
-                            queue.push(y);
-                        }
-
-                    }
-                }
             }
         }
 
-        
-        
+        while (queue.empty() == false)
+        {
+            int x = queue.front();
+
+            queue.pop();
+
+            cout << x << " ";
+
+            for (int i = 0; i < adjacencyList[x].size(); i++)
+            {
+                int y = adjacencyList[x][i];
+
+                degree[y]--;
+
+                if (degree[y] == 0)
+                {
+                    queue.push(y);
+                }
+
+            }
+        }
     }
 
 
