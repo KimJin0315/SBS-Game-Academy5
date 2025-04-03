@@ -1,109 +1,141 @@
 ﻿#include <iostream>
 #include <vector>
-#include <queue>
+#include <algorithm>
 
 #define SIZE 8
 
 using namespace std;
 
-class Graph
+class Kruskal
 {
 private:
-    int degree[SIZE];
-    queue<int> queue;
-    vector<int> adjacencyList[SIZE];
-public:
-
-    Graph()
+    class Edge
     {
+    private:
+        int vertexX;
+        int vertexY;
+        int weight;
+    public:
+        Edge(int vertexX, int vertexY, int weight)
+        {
+            this->vertexX = vertexX;
+            this->vertexY = vertexY;
+            this->weight = weight;
+        }
+
+        const int& VertexX() { return vertexX; }
+        const int& VertexY() { return vertexY; }
+        const int& Weight() { return weight; }
+
+        const bool& operator < (const Edge& edge)
+        {
+            return weight < edge.weight;
+        }
+    };
+
+    int cost;
+    int parent[SIZE];
+
+    vector<Edge> nodeList;
+
+public:
+    Kruskal()
+    {
+        cost = 0;
+
         for (int i = 0; i < SIZE; i++)
         {
-            degree[i] = 0;
+            parent[i] = i;
         }
     }
 
-    void insert(int vertex, int edge)
+    int find(int x)
     {
-        adjacencyList[vertex].push_back(edge);
-
-        degree[edge]++;
+        if (x == parent[x])
+        {
+            return x;
+        }
+        else
+        {
+            return parent[x] = find(parent[x]);
+        }
     }
 
-    void sort()
+    void Union(int x, int y)
     {
-        for (int i = 1; i < SIZE; i++)
+        x = find(x);
+        y = find(y);
+
+        if (x < y)
         {
-            if (degree[i] == 0)
+            parent[y] = x;
+        }
+        else
+        {
+            parent[x] = y;
+        }
+    }
+
+    bool same(int x, int y)
+    {
+        return find(x) == find(y);
+    }
+
+    void insert(int vertexX, int vertexY, int weight)
+    {
+        Edge edge(vertexX, vertexY, weight);
+
+        nodeList.push_back(edge);
+    }
+
+    void calculate()
+    {
+        sort(nodeList.begin(), nodeList.end());
+
+        for (int i = 0; i < nodeList.size(); i++)
+        {
+            if (same(nodeList[i].VertexX(), nodeList[i].VertexY()) == false)
             {
-                queue.push(i);
+                cost += nodeList[i].Weight();
+
+                Union(nodeList[i].VertexX(), nodeList[i].VertexY());
             }
         }
 
-        while (queue.empty() == false)
-        {
-            int x = queue.front();
-
-            queue.pop();
-
-            cout << x << " ";
-
-            for (int i = 0; i < adjacencyList[x].size(); i++)
-            {
-                int y = adjacencyList[x][i];
-
-                degree[y]--;
-
-                if (degree[y] == 0)
-                {
-                    queue.push(y);
-                }
-
-            }
-        }
+        cout << "Cost : " << cost << endl;
     }
-
 
 };
 
 int main()
 {
-#pragma region 위상 정렬
-    // 병합 그래프에 존재하는 각 정점들의 선행 순서를 지키며,
-    // 모든 정점을 차례대로 진행하는 알고리즘입니다.
+#pragma region 최소 신장 트리
+    // 그래프의 모든 정점을 포함하면서 사이클이 존재하지 않는
+    // 부분 그래프로, 그래프의 모든 정점을 최소 비용으로 연결하는 트리입니다.
+    
+    // 그래프의 정점의 수가 n개일 때, 간선의 수는 n-1개 입니다.
 
-    // 사이클이 발생하는 경우 위상 정렬을 수행할 수 없습니다.
+    Kruskal kruskal;
 
-    // DAG(Directed Acyclic Graph) : 사이클이 존재하지 않는 그래프
+    kruskal.insert(1, 7, 10);
+    kruskal.insert(4, 7, 14);
 
-    // 시간 복잡도 : O(V + E)
+    kruskal.insert(1, 4, 30);
+    kruskal.insert(2, 4, 25);
 
-    // 위상 정렬하는 방법
+    kruskal.insert(1, 4, 30);
+    kruskal.insert(1, 5, 19);
 
-    // 1. 진입 차수가 0인 정점을 Queue에 삽입합니다.
+    kruskal.insert(5, 7, 73);
+    kruskal.insert(2, 5, 61);
 
-    // 2. Queue에서 원소를 꺼내 열결된 모든 간선을 제거합니다.
+    kruskal.insert(5, 3, 22);
+    kruskal.insert(5, 6, 48);
+    kruskal.insert(3, 6, 36);
 
-    // 3. 간선 제거 이후에 진입 차수가 0이 된 정점을 Queue에 삽입합니다.
-
-    // 4. Queue가 비어있을 때까지 2번 ~ 3번 작업을 반복 수행합니다.
-
-    Graph graph;
-
-    graph.insert(1, 2);
-    graph.insert(1, 5);
-
-    graph.insert(2, 3);
-    graph.insert(3, 4);
-
-    graph.insert(4, 6);
-    graph.insert(5, 6);
-
-    graph.insert(6, 7);
-
-    graph.sort();
+    kruskal.calculate();
 
 #pragma endregion
-
 
 
     return 0;
